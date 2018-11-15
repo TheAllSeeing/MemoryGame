@@ -1,0 +1,15 @@
+A:\Tom\VS Projects\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache
+A:\Tom\VS Projects\Memory Game\Memory Game\obj\Debug\Memory_Game.Form1.resources
+A:\Tom\VS Projects\Memory Game\Memory Game\obj\Debug\Memory_Game.Properties.Resources.resources
+A:\Tom\VS Projects\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.GenerateResource.cache
+A:\Tom\VS Projects\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CoreCompileInputs.cache
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\bin\Debug\Memory Game.exe.config
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\bin\Debug\Memory Game.exe
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\bin\Debug\Memory Game.pdb
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory_Game.Form1.resources
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory_Game.Properties.Resources.resources
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.GenerateResource.cache
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CoreCompileInputs.cache
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory Game.exe
+C:\Users\ataya\Desktop\Computer Codes\C#\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
