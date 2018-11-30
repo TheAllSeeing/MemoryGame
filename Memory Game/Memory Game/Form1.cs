@@ -40,44 +40,43 @@ namespace Memory_Game
         }
         public void SetBoard() //Enables all buttons, erases their current text, and gives them new numbers. 
         {
-            tempScore = score;
-            tempLife = life;
+            tempScore = score; //Keeps current score for the occasion where the round restarts
+            tempLife = life; //Keeps current life count for the occasion where the round restarts
+            foreach (Button card in allButtons.ToList()) //Bring
+            {
+                allButtons.Remove(card);
+            }
+            int c = 1;
             foreach (Button card in groupBox1.Controls)
             {
+                MessageBox.Show(card.Name, Convert.ToString(c++));
                 if (allButtons.Count != 20)
                 {
-                    if(allButtons.Contains(card))
-                    {
-                        allButtons.Add(tempcard);
-                        allButtons.Add(woncard);
-                    }
-                    else
-                        allButtons.Add(card);
+                    allButtons.Add(card);
                 }
             }
-            IList<int> ValuePlacementList = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-            IList<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; //List for possible card values
-            for (int i = 0; i < 10; i++) //iterates for the amount of buttons
+            IList<int> ValuePlacementList = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 }; //List of the card's value polacement to randomize which card gets a number
+            IList<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; //List for possible card values, to randomize the value that is assigned to each pair.
+            for (int i = 0; i < 10; i++) //iterates for each pair of cards with the same number
             {
                 int placement = rndNum.Next(0, numbers.Count); //randomizes the card's value position in the value array
-                for (int g = 0; g < 2; g++)
+                for (int g = 0; g < 2; g++) //iterates for both of the cards with the same number.
                 {
                     string cardnumber = Convert.ToString(numbers[placement]); //assign randomized value to variable
                     int valueplacement = rndNum.Next(0, ValuePlacementList.Count); //randomize a position from the list of buttons noyt yest picked
                     int truevalueplacement = ValuePlacementList[valueplacement]; //gets the randomized button number
                     values[truevalueplacement] = cardnumber; //assigns the card's value to the card randomized in the line above
-                    ValuePlacementList.RemoveAt(valueplacement);
+                    ValuePlacementList.RemoveAt(valueplacement); //Remove the placement of the card from the list - removes the possibility of the code changing that card's number.
                 }
-                numbers.RemoveAt(placement);
+                numbers.RemoveAt(placement); //Remove the card value from the list, so there won't be identical pairs.
 
             }
-            int a = 1;
             if (!ImmortalMode)
                 textBox3.Text = Convert.ToString(life);
+            int a = 1;
             foreach (Button card in allButtons)
             {
                 card.Enabled = true;
-                MessageBox.Show(card.Name, Convert.ToString(a++));
                 card.Text = "";
             }
         }
@@ -352,21 +351,18 @@ namespace Memory_Game
             MessageBox.Show("Congrats!\nYou chose identical cards, and got a point!","Congrats!!",MessageBoxButtons.OK);
             score += 1;
             textBox4.Text = Convert.ToString(score);
-            if(score%10==0)
-            {
-                MessageBox.Show("Congratulations! Yo have discovered all ten pairs... \n\n of this round! Would you like to advance to the next?", "You won!", MessageBoxButtons.OK);
-                SetBoard();
-
-            }
-            else
-            {
-                allButtons.Remove(woncard);
-                allButtons.Remove(tempcard);
-            }
+            allButtons.Remove(woncard);
+            allButtons.Remove(tempcard);
             woncard.Enabled = false;
             tempcard.Enabled = false;
             woncard.Text = Convert.ToString(WonNumber);
             tempcard.Text = Convert.ToString(temp);
+            if (score%10==0)
+            {
+                MessageBox.Show("Congratulations! You have discovered all ten pairs... \n\n of this round! Would you like to advance to the next?", "You won!", MessageBoxButtons.OK);
+                SetBoard();
+
+            }
 
         }
 

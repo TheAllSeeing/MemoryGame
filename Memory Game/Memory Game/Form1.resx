@@ -123,8 +123,8 @@
 This is a game of memory. 
 In this game you need to try and guess as many pairs of matching numbers as you can.
 Each pair will give you 1 point. If you guess wrong you lose 1 life. you have 10 lives.
-If you complete the board you get an additional 10 points and gain 1 life, and if you complete it 
-without losing any lives you get 15 points and 2 lives. 
+If you complete the board you get an additional 10 points and gain 5 life, and if you complete it 
+without losing any lives you get 15 points and 10 lives. 
 Once you die the score resets. You can also reset the board or score at any time.
 To start guessing, press one of the number buttons.
 
